@@ -1,59 +1,76 @@
-# CalculEmpreinteCarbone
+# 🌱 Calcul d'empreinte carbone
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.0.
+## Présentation
 
-## Development server
+Application web développée avec **Angular** dans le cadre de ma formation de **Conceptrice Développeuse d'Applications (CDA)**.
 
-To start a local development server, run:
+Elle permet d'estimer les émissions de CO₂ liées aux trajets en voiture, de suivre la consommation de carburant et de consulter un récapitulatif des voyages enregistrés.
+
+## Fonctionnalités
+
+- 🚗 Ajout de trajets avec distance et consommation de carburant.
+- 🌍 Calcul automatique des émissions de CO₂.
+- 📊 Affichage des distances, de la consommation totale et des émissions cumulées.
+- 💾 Sauvegarde des voyages dans le navigateur avec `localStorage`.
+- 🔄 Réinitialisation des voyages et restauration des données de démonstration.
+- 👤 Navigation entre les pages Accueil, Résumé et Profil.
+- 🔐 Simulation de connexion et de déconnexion avec protection des routes.
+
+## Technologies utilisées
+
+- **Angular 22**
+- **TypeScript**
+- **HTML5**
+- **CSS3**
+- **Angular Router**
+- **Git et GitHub**
+
+## Installation et lancement
+
+Cloner le dépôt :
+
+```bash
+git clone https://github.com/meryam89/calcul-empreinte-carbone.git
+```
+
+Accéder au projet :
+
+```bash
+cd calcul-empreinte-carbone
+```
+
+Installer les dépendances :
+
+```bash
+npm install
+```
+
+Démarrer l'application :
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Ouvrir ensuite `http://localhost:4200/` dans un navigateur.
 
-## Code scaffolding
+## Compilation
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+Pour générer une version de production :
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Informations importantes
 
-## Running unit tests
+- La connexion est **simulée** : il n'y a pas de serveur d'authentification.
+- Les voyages sont enregistrés localement dans le navigateur, sans base de données.
+- Le calcul des émissions repose sur un facteur indicatif de **2,3 kg de CO₂ par litre de carburant**.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Objectif pédagogique
 
-```bash
-ng test
-```
+Ce projet m'a permis de mettre en pratique la création de composants Angular, les services, l'injection de dépendances, le routage, les formulaires, la manipulation de données et leur persistance locale.
 
-## Running end-to-end tests
+## Dépôt GitHub
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+[Consulter le code source](https://github.com/meryam89/calcul-empreinte-carbone)
