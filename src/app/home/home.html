@@ -1,0 +1,41 @@
+<h1>🌱 Calcul d'empreinte carbone</h1>
+
+<p class="sous-titre">
+  Bienvenue sur votre espace de suivi écologique !
+</p>
+
+<p class="description">
+  Estimez les émissions de CO₂ de vos trajets en voiture,
+  suivez votre consommation de carburant et prenez
+  conscience de votre impact sur l'environnement.
+</p>
+
+<div class="fonctionnalites">
+  <div class="fonctionnalite">
+    🚗
+    <h3>Mes trajets</h3>
+    <p>Ajoutez vos voyages et consultez leur historique.</p>
+  </div>
+
+  <div class="fonctionnalite">
+    🌍
+    <h3>Mon impact</h3>
+    <p>Calculez vos émissions de CO₂ et votre consommation.</p>
+  </div>
+
+  <div class="fonctionnalite">
+    💾
+    <h3>Mes données</h3>
+    <p>Retrouvez vos voyages enregistrés dans votre navigateur.</p>
+  </div>
+</div>
+
+<button class="btn-connexion" (click)="login()">
+  Se connecter
+</button>
+
+@if (user.getUsername()) {
+  <button class="btn-profil" [routerLink]="['/profile', user.getUsername()]">
+    Accéder à mon profil
+  </button>
+}

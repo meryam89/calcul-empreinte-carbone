@@ -1,0 +1,41 @@
+<div class="formulaire-carbone">
+
+  <h2>Ajouter un voyage</h2>
+
+  <form (ngSubmit)="ajouterVoyage()">
+
+    <div>
+      <label for="distance">Distance parcourue (km)</label>
+
+      <input
+        type="number"
+        id="distance"
+        name="distance"
+        [(ngModel)]="distanceKm"
+        min="0.01"
+        step="any"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="consommation">Consommation (L/100 km)</label>
+
+      <input
+        type="number"
+        id="consommation"
+        name="consommation"
+        [(ngModel)]="consommationPour100Km"
+        min="0.01"
+        step="any"
+        required
+      />
+    </div>
+
+    <button type="submit">
+      Ajouter un voyage
+    </button>
+
+  </form>
+
+</div>

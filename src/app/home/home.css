@@ -1,0 +1,136 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  color: #216b45;
+  margin-bottom: 30px;
+}
+
+button {
+  width: 240px;
+  margin: 10px;
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+button:first-of-type {
+  background-color: #278755;
+}
+
+button:last-of-type {
+  background-color: #ffffff;
+  color: #216b45;
+  border: 2px solid #278755;
+}
+
+button:last-of-type:hover {
+  background-color: #e5f3e9;
+}
+:host {
+  display: block;
+  max-width: 750px;
+  margin: 60px auto;
+  padding: 45px 30px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+h1 {
+  color: #216b48;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+button {
+  display: inline-block;
+  margin: 10px;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  :host {
+    margin: 20px 12px;
+    padding: 30px 18px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+.sous-titre {
+  font-size: 20px;
+  color: #216b48;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.fonctionnalites {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.fonctionnalite {
+  background-color: #eaf5ee;
+  padding: 20px 15px;
+  border-radius: 12px;
+  border: 1px solid #c8e6d1;
+}
+
+.fonctionnalite h3 {
+  color: #216b48;
+  margin: 12px 0;
+}
+
+.fonctionnalite p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .fonctionnalites {
+    grid-template-columns: 1fr;
+  }
+}
+
+button.btn-connexion {
+  background-color: #258754;
+  color: white;
+  border: 2px solid #258754;
+}
+
+button.btn-connexion:hover {
+  background-color: #1d6b42;
+  color: white;
+}
+button.btn-profil {
+  background-color: #eaf5ee;
+  color: #216b48;
+  border: 2px solid #258754;
+  font-weight: 600;
+}
+
+button.btn-profil:hover {
+  background-color: #d1ead9;
+}

@@ -1,0 +1,19 @@
+footer {
+  background-color: #216b45;
+  color: white;
+  text-align: center;
+  padding: 22px 20px;
+  margin-top: 40px;
+}
+
+.date {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+.nom-application {
+  font-size: 14px;
+  color: #d7f2e2;
+  margin: 0;
+}

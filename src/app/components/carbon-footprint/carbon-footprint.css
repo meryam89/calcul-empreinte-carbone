@@ -1,0 +1,73 @@
+/* Présentation du tableau des voyages */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #216b45;
+  color: white;
+}
+
+th,
+td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8e4;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f1f8f3;
+}
+
+tbody tr:hover {
+  background-color: #e3f2e8;
+}
+
+@media (max-width: 600px) {
+  th,
+  td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
+.btn-danger {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #a93226;
+}
+.btn-demo {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+}
+
+.btn-demo:hover {
+  background-color: #21618c;
+}
+button {
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+.message-vide {
+  background-color: #fff8e1;
+  color: #856404;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 15px 0;
+}

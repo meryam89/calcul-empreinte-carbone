@@ -1,0 +1,18 @@
+<header>
+  <nav>
+    <a routerLink="/home">Accueil</a>
+    <a routerLink="/summary">Résumé</a>
+
+    <span>Utilisateur : {{ getUsername() }}</span>
+
+    <a [routerLink]="['/profile', getUsername()]">
+      Profil
+    </a>
+
+    @if (getUsername()) {
+      <button type="button" (click)="logout()">
+        Se déconnecter
+      </button>
+    }
+  </nav>
+</header>

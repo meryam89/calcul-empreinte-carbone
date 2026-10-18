@@ -1,0 +1,81 @@
+
+<section>
+  <h2>Empreinte carbone</h2>
+
+  <p [ngClass]="{
+  'haute-distance': distanceKm > 500,
+  'basse-distance': distanceKm < 100
+}">
+    Distance totale : {{ distanceKm }} km
+  </p>
+
+  <p
+    [style.color]="
+      consommationPour100Km > 7
+        ? 'red'
+        : consommationPour100Km < 4
+        ? 'green'
+        : 'black'
+    ">
+
+    Consommation pour 100 km :
+    {{ consommationPour100Km | number:'1.0-2' }} L
+  </p>
+
+  <p>
+    Consommation totale :
+    {{ consommationTotaleLitres | number:'1.2-2' }} L
+  </p>
+  <p>
+    Émissions totales de CO₂ :
+    <strong>{{ quantiteCO2Totale | number:'1.2-2' }} kg</strong>
+  </p>
+
+  <div *ngIf="consommationPour100Km > 7">
+    Attention, votre consommation est élevée
+  </div>
+
+  <div *ngIf="consommationPour100Km < 4">
+    Félicitations, votre consommation est faible
+  </div>
+
+  <button (click)="ajouter100Km()">
+    +100 km
+  </button>
+
+  <button type="button"  class="btn-danger" (click)="reinitialiserVoyages()">
+    Réinitialiser les voyages
+  </button>
+
+  <button type="button"  class="btn-demo" (click)="restaurerVoyagesDemo()">
+    Restaurer les voyages de démonstration
+  </button>
+
+  <h2>Liste des voyages</h2>
+
+  <p *ngIf="voyages.length === 0" class="message-vide">
+    Aucun voyage enregistré pour le moment.
+  </p>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Distance</th>
+      <th>Consommation pour 100 kms</th>
+      <th>Quantité de CO2</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let voyage of voyages">
+      <td>{{ voyage.distanceKm }} km</td>
+      <td>{{ voyage.consommationPour100Km }} L</td>
+      <td>{{ voyage.quantiteCO2 | number:'1.2-2' }} kg</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <app-carbon-footprint-form
+    (voyageAjoute)="ajouterVoyageDepuisFormulaire($event)">
+  </app-carbon-footprint-form>
+  <app-carbon-footprint-result></app-carbon-footprint-result>
+</section>

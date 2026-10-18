@@ -1,0 +1,61 @@
+.formulaire-carbone {
+  background-color: #f1f8f3;
+  padding: 25px;
+  margin-top: 30px;
+  border-radius: 12px;
+  border: 1px solid #d8e9dd;
+}
+
+h2 {
+  color: #216b45;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: bold;
+  color: #24352b;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #b8d2c1;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+}
+
+input:focus {
+  outline: none;
+  border-color: #278755;
+  box-shadow: 0 0 0 3px rgba(39, 135, 85, 0.15);
+}
+
+button {
+  align-self: flex-start;
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .formulaire-carbone {
+    padding: 18px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
